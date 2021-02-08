@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алгоритм</title>
+  </head>
+  <body>
+    <h2>
+      Введите число n от 0 до 65536, и получите n массивов случайных чисел
+    </h2>
+    <h3>более подробное описание - в readme.md</h3>
+    <input type="number" id="arg-n" placeholder="Число" autofocus />
+    <button onclick="onClick()">Запустить</button>
+    <pre id="result"></pre>
+    <script src="../build/main.js"></script>
+    <script>
+      const onClick = () => {
+        const n = document.getElementById("arg-n").value;
+        const resultBlock = document.getElementById("result");
+        resultBlock.innerHTML = null;
+
+        calcAlg(n).forEach((item) => {
+          const newAr = document.createElement("div");
+          newAr.innerHTML = JSON.stringify(item);
+          newAr.style = "padding: 20px; margin: 20px; overflow: scroll;";
+          resultBlock.appendChild(newAr);
+        });
+      };
+    </script>
+  </body>
+</html>

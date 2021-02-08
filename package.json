@@ -1,0 +1,16 @@
+{
+  "name": "alg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "tsc",
+    "lint": "eslint . & echo 'lint complete'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.1.3"
+  }
+}
